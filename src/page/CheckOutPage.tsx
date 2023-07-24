@@ -290,9 +290,7 @@ const ErrorZipCode = styled(ErrorName)`
 const ErrorCity = styled(ErrorName)`
   top: 72%;
 `;
-const ErrorCountry = styled(ErrorName)`
-  top: 81.5%;
-`;
+
 const ErrorBank = styled(ErrorName)`
   top: 97.4%;
 `;
