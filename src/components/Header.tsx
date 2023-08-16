@@ -574,7 +574,7 @@ const WrapperTablet = styled.div`
 const Line = styled.div`
   height: 1px;
   background-color: ${(props) => props.theme.colors.White};
-  width: 110%;
+  width: 100%;
   opacity: 60%;
   @media (min-width: 1440px) {
     width: 1110px;
