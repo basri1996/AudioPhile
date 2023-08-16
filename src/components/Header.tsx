@@ -273,7 +273,14 @@ const OpacityDiv = styled.div`
   width: 100%;
   height: 455%;
   top: 88px;
-  z-index: 10;
+  z-index: 20;
+  @media (min-width: 768px) {
+    width: 158%;
+  }
+  @media (min-width: 1440px) {
+    width: 100%;
+    height: 455%;
+  }
 `;
 const CheckOutBtn = styled.button`
   all: unset;
@@ -296,16 +303,24 @@ const CheckOutBtn = styled.button`
   }
 `;
 const WhiteCard = styled.div`
-  height: auto;
-  width: 377px;
-  right: 385px;
-  top: 129px;
   border-radius: 8px;
   background-color: ${(props) => props.theme.colors.White};
   position: absolute;
-  padding: 32px 31px 31px 33px;
+  height: auto;
   outline: none;
   z-index: 20;
+  border-radius: 8px;
+  width: 377px;
+  padding: 32px 31px 31px 33px;
+  top: 90px;
+  @media (min-width: 400px) {
+    right: 3%;
+    top: 127px;
+  }
+  @media (min-width: 1440px) {
+    right: 385px;
+    padding: 32px 31px 31px 33px;
+  }
 `;
 
 const Cart = styled.h3`
@@ -450,7 +465,7 @@ const MappedDiv = styled.div<{ menuVisible: boolean }>`
   flex-direction: column;
   background-color: white;
   gap: 80px;
-  margin-top: 120px;
+  margin-top: 117px;
   margin-bottom: 35px;
   transition: height 5s, visibility 5s;
   position: absolute;
@@ -459,7 +474,13 @@ const MappedDiv = styled.div<{ menuVisible: boolean }>`
   background-color: white;
   z-index: 5;
   height: 850px;
-  width: 375px;
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+  @media (min-width: 1440px) {
+    display: none;
+  }
 `;
 
 const Wrapper = styled.div<{ title: string; visible: boolean }>`
@@ -467,12 +488,14 @@ const Wrapper = styled.div<{ title: string; visible: boolean }>`
     props.title || props.visible ? "black" : "#1a1a1a"};
   @media (min-width: 768px) {
     padding: 0 39.61px;
+    margin-left: -60%;
   }
   @media (min-width: 1440px) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: 0px;
   }
 `;
 
@@ -482,8 +505,8 @@ const Div = styled.div<{ title: string; visible: boolean }>`
   background-color: ${(props) =>
     props.title || props.visible ? "black" : "#1a1a1a"};
   display: flex;
-  justify-content: space-between;
   padding: 0 24px;
+  justify-content: space-between;
   @media (min-width: 768px) {
     padding: 0;
   }
@@ -551,7 +574,7 @@ const WrapperTablet = styled.div`
 const Line = styled.div`
   height: 1px;
   background-color: ${(props) => props.theme.colors.White};
-  width: 100%;
+  width: 110%;
   opacity: 60%;
   @media (min-width: 1440px) {
     width: 1110px;
