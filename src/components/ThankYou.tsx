@@ -39,11 +39,7 @@ const ThankuText = styled.h1`
 
 const Div = styled.div`
   background-color: ${(props) => props.theme.colors.LightGray};
-  width: 540px;
-  height: 540px;
   position: absolute;
-  left: 35%;
-  top: 12%;
   z-index: 120;
   border-radius: 8px;
   display: flex;
@@ -51,6 +47,36 @@ const Div = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 50px;
+  width: 350px;
+  height: 350px;
+  left: 7%;
+  top: 12%;
+  padding: 35px;
+  @media (min-width: 440px) {
+    left: 10%;
+  }
+  @media (min-width: 450px) {
+    left: 15%;
+  }
+  @media (min-width: 550px) {
+    left: 20%;
+  }
+  @media (min-width: 650px) {
+    left: 25%;
+  }
+  @media (min-width: 750px) {
+    left: 30%;
+  }
+  @media (min-width: 950px) {
+    width: 540px;
+    height: 540px;
+    left: 25%;
+    padding: 0;
+  }
+  @media (min-width: 1440px) {
+    left: 35%;
+    top: 12%;
+  }
 `;
 const OpacityDiv = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
